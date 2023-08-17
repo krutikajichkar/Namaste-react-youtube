@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { openMenu } from '../redux/menuToggleSlice';
 import { useSearchParams, Link } from 'react-router-dom';
-import { YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API } from '../utils/constants';
+import { API_KEY, YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API } from '../utils/constants';
 
 const SearchResultContainer = () => {
 
@@ -18,9 +18,10 @@ const SearchResultContainer = () => {
     }, [searchQuery]);
 
     const getSearchedVideosList = async () => {
-        const data = await fetch(YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API + searchQuery);
+        const data = await fetch(YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API + searchQuery  );
         const searchedVideosJson = await data.json();
         setSearchedVideos(searchedVideosJson?.items);
+        console.log(searchedVideosJson?.items?.id)
     }
 
     return (
@@ -28,7 +29,7 @@ const SearchResultContainer = () => {
             <div className='flex flex-col px-3  items-center'>
                 <div className='p-2 m-2'>
                     {searchedVideos?.map(video =>
-                        <Link key={video?.id?.videoId} to={'/watch?v=' + video?.id?.videoId}>
+                        <Link key={video?.id?.videoId} to={'/watch?v=' + video?.id?.videoId} >
                             <div className='px-3 m-4 flex'>
                                 <img className='rounded-lg w-[400px] h-[210px] ' alt='thumbnail' src={video?.snippet?.thumbnails?.medium?.url} />
                                 <ul className='flex flex-col justify-start ml-5 w-96'>

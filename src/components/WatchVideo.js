@@ -44,7 +44,7 @@ const WatchVideo = () => {
     }
 
     return (
-        <div className={`${!isMenuOpen ? 'px-20' : 'px-3'} col-span-10 pt-6 flex w-full mt-[40px]`}>
+        <div className={`${!isMenuOpen ? 'px-20 ' : 'px-3 backdrop-blur-sm bg-white'} col-span-10 pt-6 flex w-full mt-[40px] scrollTop-smooth`}>
             <div className='flex-grow-7'>
                 <div>
                     <iframe
@@ -91,7 +91,7 @@ const WatchVideo = () => {
                         <LiveChat />
                     </div>
                     {relatedVideos?.map(video =>
-                        <Link key={video?.id} to={'/watch?v=' + video?.id}>
+                        <Link key={video?.id} to={'/watch?v=' + video?.id} onClick={() => window.scroll(0,0)}>
                             <div className='px-3 m-2 mt-[20px] flex'>
                                 <img className='rounded-xl w-[168px] h-[94px] ' alt='thumbnail' src={video?.snippet?.thumbnails?.medium?.url} />
                                 <ul className='flex flex-col justify-start ml-2 w-60'>

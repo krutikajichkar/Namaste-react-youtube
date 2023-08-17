@@ -68,7 +68,7 @@ const LiveChat = () => {
                                     <img className='h-6 rounded-full' alt='user-icon' src='https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png' />
                                     <div className='px-3 w-full'>
                                         <div className='font-medium text-[13px] text-gray-500'>Krutika Jichkar</div>
-                                        <input value={liveMessage} onChange={(e) => setLiveMessage(e.target.value)} maxlength="200" className='border-b-[1px] border-gray-400 h-7 outline-none text-[13px] w-full focus:border-blue-500 focus:border-b-[2px] pb-2' type='text' placeholder='Chat...' />
+                                        <input value={liveMessage} onChange={(e) => setLiveMessage(e.target.value)} maxLength="200" className='border-b-[1px] border-gray-400 h-7 outline-none text-[13px] w-full focus:border-blue-500 focus:border-b-[2px] pb-2' type='text' placeholder='Chat...' />
                                         <div className='flex justify-end text-gray-500 text-[13px] mt-2'><span className='mr-3'>{liveMessage?.length}/200</span><button className='border rounded-full px-3'>Send</button></div>
                                     </div>
                                 </div>

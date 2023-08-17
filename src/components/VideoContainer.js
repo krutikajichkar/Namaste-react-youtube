@@ -3,11 +3,14 @@ import VideoCard from './VideoCard'
 import { YOUTUBE_API } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import Shimmer from './Shimmer';
+import { useSelector } from 'react-redux';
 
 const VideoContainer = () => {
 
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState("");
+
+  const isMenuOpen = useSelector((store) => store.menu.isMenuOpen)
 
   useEffect(() => {
     getVideos();
@@ -41,7 +44,7 @@ const VideoContainer = () => {
   if (!videos.length) return <Shimmer />
 
   return (
-    <div className='flex flex-wrap justify-center ml-[280px]'>
+    <div className={`flex flex-wrap justify-center ${!isMenuOpen ? "" : "ml-[280px]"}`}>
      
       {videos?.map(video =>
         <Link key={video?.id} to={'/watch?v=' + video.id}><VideoCard videoInfo={video} /></Link>
