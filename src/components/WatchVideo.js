@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { closeMenu } from '../redux/menuToggleSlice';
 import { useSearchParams } from 'react-router-dom';
-import { YOUTUBE_VIDEO_WATCH_API, YOUTUBE_RECOMENDED_VIDEO_LIST_API, YOUTUBE_API } from '../utils/constants';
+import { YOUTUBE_VIDEO_WATCH_API,  YOUTUBE_API } from '../utils/constants';
 import { formatCompactNumber } from '../utils/helper';
 import { Link } from 'react-router-dom';
 import CommentsContainer from './CommentsContainer';

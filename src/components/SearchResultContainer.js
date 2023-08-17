@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { openMenu } from '../redux/menuToggleSlice';
 import { useSearchParams, Link } from 'react-router-dom';
-import { API_KEY, YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API } from '../utils/constants';
+import {  YOUTUBE_SEARCH_VIDEO_WITH_QUERY_API } from '../utils/constants';
 
 const SearchResultContainer = () => {
 
