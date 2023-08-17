@@ -52,7 +52,7 @@ const LiveChat = () => {
                     (<div className=' w-[364px] h-[20px]  mx-3 text-center'><button onClick={() => setIsShowChat(true)} className='rounded-full hover:bg-gray-200 border py-1 w-full text-[14px]'>Show Chat</button></div>)
                     :
                     (
-                        <div className='w-full h-[700px] border rounded-lg ml-[40px]'>
+                        <div className='w-[500px] h-[700px] border rounded-lg '>
                             <div className='h-[40px] p-2 m-2' >Top Chat</div>
                             <hr className="h-[1px] my-2 border-b-[1px] border-0" />
                             <div className='h-[470px] overflow-y-scroll overflow-hidden  flex flex-col-reverse'>

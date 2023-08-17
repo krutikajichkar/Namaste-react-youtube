@@ -44,12 +44,12 @@ const WatchVideo = () => {
     }
 
     return (
-        <div className={`${!isMenuOpen ? 'px-20 ' : 'px-3 backdrop-blur-sm bg-white'} col-span-10 pt-6 flex w-full mt-[40px] scrollTop-smooth`}>
-            <div className='flex-grow-7'>
+        <div className={`${!isMenuOpen ? 'px-20 ' : 'px-3 backdrop-blur-sm bg-white'} col-span-10 pt-6 flex w-full mt-[40px] `}>
+            <div className='flex-grow-6'>
                 <div>
                     <iframe
                         width="1200"
-                        height="700"
+                        height="600"
                         src={"https://www.youtube.com/embed/" + videoId}
                         title="YouTube video player"
                         frameBorder="0"
