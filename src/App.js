@@ -1,5 +1,5 @@
 
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import {  createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Error from './components/Error';
